@@ -1,104 +1,66 @@
-/* Estilos generales */
-body {
-  font-family: 'Roboto', sans-serif;
+/* --- Reset general --- */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f6f5fa;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fdf9ff;
   color: #333;
-}
-
-header {
-  background-color: #6c4bb8;
-  color: white;
+  line-height: 1.6;
   padding: 20px;
+}
+
+/* --- Título principal --- */
+h1 {
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+  color: #5e2b97;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 3px rgba(94, 43, 151, 0.2);
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.2em;
-  letter-spacing: 1px;
-}
-
-main {
-  max-width: 1200px;
-  margin: 30px auto;
-  padding: 0 20px;
-}
-
-h2 {
-  color: #6c4bb8;
-  margin-bottom: 15px;
-  font-size: 1.6em;
-}
-
-.article-preview {
-  background-color: white;
-  border-radius: 16px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+/* --- Contenedor de perfumes --- */
+.perfume {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(94, 43, 151, 0.15);
   padding: 20px;
   margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.article-preview:hover {
-  transform: scale(1.02);
+.perfume:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(94, 43, 151, 0.2);
 }
 
-.article-preview img {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 15px;
-}
-
-.article-preview h3 {
-  font-size: 1.4em;
-  margin: 0 0 10px;
-  color: #333;
-}
-
-.article-preview p {
-  font-size: 1em;
-  color: #555;
+/* --- Nombre del perfume --- */
+.perfume h2 {
+  color: #4a1d85;
+  font-size: 1.8rem;
   margin-bottom: 10px;
 }
 
-.article-preview a {
+/* --- Artículo de descripción --- */
+.perfume article {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-left: 10px;
+  border-left: 4px solid #d6c2f0;
+}
+
+/* --- Separador opcional entre perfumes --- */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 30px 0;
+}
+/* --- Enlaces --- */
+a { 
+  color: #5e2b97;
   text-decoration: none;
-  color: #6c4bb8;
-  font-weight: bold;
-  transition: color 0.2s ease;
-}
-
-.article-preview a:hover {
-  color: #523496;
-}
-
-footer {
-  background-color: #6c4bb8;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-  font-size: 0.9em;
-}
-
-/* Responsive para móviles */
-@media (max-width: 768px) {
-  .article-preview {
-    padding: 15px;
-  }
-
-  .article-preview img {
-    max-height: 250px;
-  }
-
-  header h1 {
-    font-size: 1.8em;
-  }
-}   
+}  
